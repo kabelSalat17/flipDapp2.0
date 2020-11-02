@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+}
+
+.jumbotron {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.coin {
+    width: 300px;
+    height: 300px;
+}
+
+.animate {
+    animation: rotateAnimation 3s infinite;
+}
+
+@keyframes rotateAnimation { 
+    from { 
+        transform: rotateY(0deg); 
+    } to { 
+        transform: rotateY(360deg); 
+    }
+}
+
+@media (min-width: 576px) {
+    .jumbotron {
+        padding: 1.8rem 1rem;
+    }
+}
