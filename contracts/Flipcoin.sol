@@ -45,7 +45,8 @@ contract Flipcoin is Ownable, usingProvable {
     function bet() public payable costs(0.001 ether) {
 
         //before to play requirements
-        require(msg.value <= contractBalance, "Not enough funds to pay out.Should pay to play first");
+        require(contractBalance!=0, "Nothing to win")
+        require(msg.value/2 <= contractBalance, "Not enough funds to pay out");
 
         //player still waiting?
         require(waitingList[msg.sender] == false);
