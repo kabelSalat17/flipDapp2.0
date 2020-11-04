@@ -46,7 +46,7 @@ contract Flipcoin is Ownable, usingProvable {
 
         //before to play requirements
         require(contractBalance!=0, "Nothing to win")
-        require(msg.value/2 <= contractBalance, "Not enough funds to pay out");
+        require(msg.value*2 <= contractBalance, "Not enough funds to pay out");
 
         //player still waiting?
         require(waitingList[msg.sender] == false);
